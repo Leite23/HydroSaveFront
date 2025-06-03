@@ -1,0 +1,369 @@
+:root {
+    --primary-blue: #0d6efd;
+    --dark-blue: #003366;
+    --indigo-dark: #2c3e50; /* Cor mais escura para o gradiente */
+    --indigo-extra-dark: #1a242f; /* Quase preto para o background do vídeo */
+    --hero-gradient-start: #007bff; /* Azul vibrante para o início do gradiente do hero */
+    --text-color-light: #555;
+    --bg-light-gray: #f8f9fa; /* Um cinza bem claro para seções */
+    --primary-subtle: #cfe2ff; /* Azul claro para fundos de ícones */
+    --success-subtle: #d1e7dd; /* Verde claro para fundos de ícones */
+    --warning-subtle: #fff3cd; /* Amarelo claro para fundos de ícones */
+    --info-subtle: #cff4fc; /* Ciano claro para fundos de ícones */
+    --danger-subtle: #f8d7da; /* Vermelho claro para fundos de ícones */
+    --secondary-subtle: #e2e3e5; /* Cinza claro para fundos de ícones */
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-light-gray);
+}
+
+.navbar {
+    background-color: var(--dark-blue) !important;
+}
+
+.pitch-hero {
+    background: linear-gradient(45deg, var(--hero-gradient-start), var(--indigo-dark));
+    padding: 80px 0;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+    position: relative;
+    overflow: hidden;
+    min-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.pitch-hero h1 {
+    font-size: 3.8rem; /* Aumentado para mais impacto */
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    color: #fff;
+    letter-spacing: -1px;
+}
+.pitch-hero .lead {
+    font-size: 1.6rem; /* Aumentado */
+    font-weight: 400;
+    max-width: 900px; /* Aumentado para texto mais abrangente */
+    margin: 0 auto 40px auto;
+    color: rgba(255, 255, 255, 0.95); /* Mais branco */
+    line-height: 1.6;
+}
+.pitch-hero .btn-outline-light {
+    border-color: rgba(255, 255, 255, 0.7);
+    color: rgba(255, 255, 255, 0.9);
+    padding: 1rem 2.5rem;
+    font-size: 1.25rem;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+.pitch-hero .btn-outline-light:hover {
+    background-color: #fff;
+    color: var(--hero-gradient-start);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+.pitch-hero .hero-bubble {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.15); /* Mais visível */
+    border-radius: 50%;
+    filter: blur(100px); /* Mais blur */
+    opacity: 0.8; /* Mais opaco */
+    animation: floatBubbles 25s infinite ease-in-out; /* Duração maior */
+    z-index: 0;
+}
+.pitch-hero .hero-bubble-1 { top: 10%; left: 15%; width: 180px; height: 180px; animation-delay: 0s; }
+.pitch-hero .hero-bubble-2 { bottom: 8%; right: 20%; width: 300px; height: 300px; animation-delay: 7s; }
+.pitch-hero .hero-bubble-3 { top: 30%; left: 65%; width: 220px; height: 220px; animation-delay: 14s; }
+
+
+/* SEÇÃO DE PILARES - NOVOS ESTILOS */
+.pilares-section {
+    background-color: var(--bg-light-gray);
+    padding: 80px 0;
+}
+.pilares-section h2 {
+    color: var(--dark-blue);
+    margin-bottom: 60px;
+    font-size: 2.8rem;
+    font-weight: 700;
+}
+
+.card-modern {
+    border: none;
+    border-radius: 20px; /* Cantos mais arredondados */
+    background-color: #fff;
+    box-shadow: 0 10px 30px rgba(0, 51, 102, 0.08); /* Sombra mais sutil e com cor do tema */
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    overflow: hidden;
+}
+
+.card-modern:hover {
+    transform: translateY(-15px) scale(1.02); /* Deslocamento maior e leve aumento */
+    box-shadow: 0 25px 50px rgba(0, 51, 102, 0.15); /* Sombra mais intensa no hover */
+}
+
+.card-modern .card-body {
+    padding: 40px 30px;
+}
+
+.icon-circle {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 25px auto;
+    font-size: 2.8rem; /* Ícones maiores */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.card-modern .card-title {
+    font-size: 1.8rem; /* Título maior */
+    margin-bottom: 15px;
+    color: var(--dark-blue);
+}
+
+.card-modern .card-text {
+    font-size: 1.05rem; /* Texto maior */
+    line-height: 1.7;
+    color: var(--text-color-light);
+}
+
+
+.video-pitch-section {
+    background-color: var(--indigo-extra-dark);
+    color: white;
+    padding: 100px 0; /* Mais padding */
+    text-align: center;
+}
+.video-pitch-section h2 {
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+    margin-bottom: 50px; /* Mais margem */
+    font-size: 3rem; /* Título maior */
+    font-weight: 700;
+}
+.video-pitch-section .ratio {
+    border-radius: 20px; /* Mais arredondado */
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.5); /* Sombra mais forte */
+    background-color: #000;
+    max-width: 950px; /* Maior largura */
+}
+.video-pitch-section iframe {
+    border: none;
+}
+.video-pitch-section .btn {
+    margin-top: 50px; /* Mais margem */
+    padding: 1.2rem 3rem; /* Botão maior */
+    font-size: 1.25rem;
+    border-radius: 50px;
+}
+.video-pitch-section .btn-outline-light {
+    border-color: rgba(255,255,255,0.7);
+    color: rgba(255,255,255,0.8);
+    transition: all 0.3s ease;
+}
+.video-pitch-section .btn-outline-light:hover {
+    background-color: white;
+    color: var(--indigo-dark);
+    box-shadow: 0 8px 20px rgba(255,255,255,0.2);
+}
+
+footer.custom-footer {
+    background-color: var(--indigo-extra-dark); /* Fundo do footer mais escuro */
+    color: white;
+    padding: 60px 0;
+    border-top: 5px solid var(--primary-blue); /* Linha superior com cor primária */
+}
+footer.custom-footer h5 {
+    color: var(--primary-blue); /* Títulos do footer com cor primária */
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+footer.custom-footer p, footer.custom-footer a {
+    color: rgba(255, 255, 255, 0.8);
+}
+footer.custom-footer a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+footer.custom-footer .list-unstyled li {
+    margin-bottom: 0.8rem;
+}
+footer.custom-footer .small {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.85rem !important;
+}
+
+
+/* ANIMAÇÕES GLOBAIS E NOVAS ANIMAÇÕES */
+@keyframes floatBubbles {
+    0%, 100% { transform: translateY(0) scale(1); }
+    50% { transform: translateY(-30px) scale(1.05); opacity: 0.9; } /* Mais movimento */
+}
+@keyframes floatCard {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); } /* Movimento sutil */
+}
+@keyframes bounceLight {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+        box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    }
+    40% {
+        transform: translateY(-10px); /* Mais bounce */
+        box-shadow: 0 12px 25px rgba(0,0,0,0.35);
+    }
+    60% {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 18px rgba(0,0,0,0.3);
+    }
+}
+
+/* Animações de entrada ao rolar */
+@keyframes fadeInOnScroll {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes zoomInOnScroll {
+    from { opacity: 0; transform: scale(0.9) translateY(30px); }
+    to { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+.animate-fade-in-on-scroll {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.animate-fade-in-on-scroll.is-visible {
+    animation: fadeInOnScroll 0.8s ease-out forwards;
+}
+
+.animate-zoom-in-on-scroll {
+    opacity: 0;
+    transform: scale(0.9) translateY(30px);
+    transition: opacity 0.9s ease-out, transform 0.9s ease-out;
+}
+
+.animate-zoom-in-on-scroll.is-visible {
+    animation: zoomInOnScroll 0.9s ease-out forwards;
+}
+
+/* Delays para animações sequenciais */
+.delay-100ms { animation-delay: 0.1s !important; }
+.delay-200ms { animation-delay: 0.2s !important; }
+.delay-300ms { animation-delay: 0.3s !important; }
+.delay-400ms { animation-delay: 0.4s !important; }
+.delay-500ms { animation-delay: 0.5s !important; }
+
+/* Animações existentes */
+.animate-slide-up {
+    animation: slideUp 1s ease-out forwards;
+}
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+    animation: fadeIn 1s ease-in forwards;
+}
+.delay-1s { animation-delay: 1s; } /* Para o lead text */
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.animate-bounce-light {
+    animation: bounceLight 2s infinite ease-in-out;
+}
+
+
+/* Media Queries para Responsividade */
+@media (max-width: 992px) {
+    .pitch-hero h1 {
+        font-size: 3rem;
+    }
+    .pitch-hero .lead {
+        font-size: 1.4rem;
+    }
+    .card-modern .card-title {
+        font-size: 1.5rem;
+    }
+    .icon-circle {
+        width: 80px;
+        height: 80px;
+        font-size: 2.5rem;
+    }
+    .pilares-section h2, .video-pitch-section h2 {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .pitch-hero {
+        min-height: 70vh;
+        padding: 60px 0;
+    }
+    .pitch-hero h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
+    .pitch-hero .lead {
+        font-size: 1.1rem;
+        margin-bottom: 20px;
+    }
+    .pitch-hero .btn-outline-light {
+        padding: 0.8rem 2rem;
+        font-size: 1rem;
+    }
+    .icon-circle {
+        width: 70px;
+        height: 70px;
+        font-size: 2.2rem;
+        margin-bottom: 15px;
+    }
+    .card-modern .card-title {
+        font-size: 1.3rem;
+    }
+    .card-modern .card-text {
+        font-size: 0.95rem;
+    }
+    .pilares-section h2, .video-pitch-section h2 {
+        font-size: 1.8rem;
+        margin-bottom: 30px;
+    }
+    .video-pitch-section .btn {
+        padding: 0.9rem 2.2rem;
+        font-size: 1rem;
+    }
+    footer.custom-footer .col-md-4 {
+        text-align: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .pitch-hero h1 {
+        font-size: 2rem;
+    }
+    .pitch-hero .lead {
+        font-size: 1rem;
+    }
+    .pitch-hero .hero-bubble {
+        filter: blur(60px);
+    }
+    .pitch-hero .hero-bubble-1 { width: 100px; height: 100px; }
+    .pitch-hero .hero-bubble-2 { width: 180px; height: 180px; }
+    .pitch-hero .hero-bubble-3 { width: 150px; height: 150px; }
+    .pilares-section h2, .video-pitch-section h2 {
+        font-size: 1.6rem;
+    }
+}
